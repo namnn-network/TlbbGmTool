@@ -25,22 +25,22 @@
     </Window.Resources>
     <DockPanel>
         <TabControl Margin="5">
-            <TabItem Header="角色">
+            <TabItem Header="Nhân vật">
                 <Frame Content="{StaticResource RoleEditorPage}" />
             </TabItem>
-            <TabItem Header="心法">
+            <TabItem Header="Tâm pháp">
                 <Frame Content="{StaticResource XinFaListPage}" />
             </TabItem>
-            <TabItem Header="珍兽">
+            <TabItem Header="Pet">
                 <Frame Content="{StaticResource PetListPage}" />
             </TabItem>
-            <TabItem Header="道具栏">
+            <TabItem Header="Tay nải">
                 <Frame Content="{StaticResource BagItemListPage}" />
             </TabItem>
-            <TabItem Header="材料栏">
+            <TabItem Header="Vật phẩm">
                 <Frame Content="{StaticResource MaterialItemListPage}" />
             </TabItem>
-            <TabItem Header="任务栏">
+            <TabItem Header="Nhiệm vụ">
                 <Frame Content="{StaticResource TaskItemListPage}" />
             </TabItem>
             <!--<TabItem Header="items">

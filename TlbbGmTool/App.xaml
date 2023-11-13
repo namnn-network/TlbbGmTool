@@ -22,20 +22,20 @@
                     <ToolTip>
                         <StackPanel>
                             <TextBlock>
-                                <Run Foreground="#FF615858">名称:</Run>
+                                <Run Foreground="#FF615858">Tên:</Run>
                                 <Run Text="{Binding ItemName, Mode=OneWay}" Foreground="#FFF12679" />
                                 <LineBreak />
-                                <Run Foreground="#FF615858">类型:</Run>
+                                <Run Foreground="#FF615858">Kiểu:</Run>
                                 <Run Text="{Binding ItemShortTypeString, Mode=OneWay}"
                                      Foreground="#FFF12679" />
                                 <LineBreak />
-                                <Run Foreground="#FF615858">等级:</Run>
+                                <Run Foreground="#FF615858">Cấp:</Run>
                                 <Run Text="{Binding ItemLevel, Mode=OneWay}" Foreground="#FFF12679" />
                                 <LineBreak />
-                                <Run Foreground="#FF615858">最大叠加:</Run>
+                                <Run Foreground="#FF615858">Xếp chồng tối đa:</Run>
                                 <Run Text="{Binding ItemMaxSize, Mode=OneWay}" Foreground="#FFF12679" />
                                 <LineBreak />
-                                <Run Foreground="#FF615858">物品id:</Run>
+                                <Run Foreground="#FF615858">ID vật phẩm:</Run>
                                 <Run Text="{Binding ItemBaseId, Mode=OneWay}" Foreground="#FFF12679" />
                                 <LineBreak />
                                 <Run Foreground="#FF615858">Class:</Run>

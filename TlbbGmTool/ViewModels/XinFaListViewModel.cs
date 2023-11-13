@@ -52,7 +52,7 @@ public class XinFaListViewModel : ViewModelBase
         }
         catch (Exception ex)
         {
-            ShowErrorMessage("加载出错", ex);
+            ShowErrorMessage("Tải dữ liệu không thành công!", ex);
         }
     }
 

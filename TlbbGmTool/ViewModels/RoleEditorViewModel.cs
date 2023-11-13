@@ -84,7 +84,7 @@ public class RoleEditorViewModel : ViewModelBase
         }
         catch (Exception ex)
         {
-            ShowErrorMessage("加载出错", ex);
+            ShowErrorMessage("Tải dữ liệu thất bại!", ex);
         }
     }
 
@@ -160,11 +160,11 @@ public class RoleEditorViewModel : ViewModelBase
                 await DoSaveRoleAsync(Connection, _roleInfo);
             });
             _inputRoleInfo?.CopyFrom(_roleInfo);
-            ShowMessage("保存成功", "保存角色信息成功");
+            ShowMessage("Lưu thông tin thành công", "Lưu thông tin thành công");
         }
         catch (Exception ex)
         {
-            ShowErrorMessage("保存角色失败", ex);
+            ShowErrorMessage("Lưu thông tin thất bại", ex);
         }
         finally
         {

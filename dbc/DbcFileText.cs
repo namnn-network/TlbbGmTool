@@ -36,7 +36,7 @@ public partial class DbcFile
         var firstLine = await reader.ReadLineAsync();
         if (firstLine is null)
         {
-            throw new Exception("读取dbc首行出错");
+            throw new Exception("Lỗi đọc hàng dữ liệu đầu tiên");
         }
         var fieldTypeStrs = firstLine.Split('\t');
         var comparisonType = StringComparison.OrdinalIgnoreCase;
@@ -60,12 +60,12 @@ public partial class DbcFile
             }
             else
             {
-                throw new Exception("未知字段类型" + str);
+                throw new Exception("Trường dữ liệu không xác định " + str);
             }
         }
         if (fieldTypes.Count == 0)
         {
-            throw new Exception("未读取到有效的字段类型");
+            throw new Exception("Không có loại trường dữ liệu hợp lệ nào!");
         }
     }
 

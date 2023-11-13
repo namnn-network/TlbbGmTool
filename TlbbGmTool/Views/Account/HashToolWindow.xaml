@@ -6,7 +6,7 @@
         xmlns:vm="clr-namespace:liuguang.TlbbGmTool.ViewModels"
         mc:Ignorable="d"
         WindowStartupLocation="CenterOwner" ShowInTaskbar="False"
-        Title="加密工具" Width="340" Height="136">
+        Title="Công cụ mã hoá" Width="340" Height="136">
     <Window.DataContext>
         <vm:HashToolViewModel />
     </Window.DataContext>
@@ -30,9 +30,9 @@
                 <Setter Property="VerticalContentAlignment" Value="Center" />
             </Style>
         </Grid.Resources>
-        <Label Grid.Row="0" Grid.Column="0">明文</Label>
+        <Label Grid.Row="0" Grid.Column="0">Văn bản gốc</Label>
         <TextBox Grid.Row="0" Grid.Column="1" Text="{Binding PlainText,UpdateSourceTrigger=PropertyChanged}" />
-        <Label Grid.Row="1" Grid.Column="0">密文</Label>
+        <Label Grid.Row="1" Grid.Column="0">Mã hoá</Label>
         <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding HashText,Mode=OneWay}"
                  IsReadOnly="True" BorderThickness="0" />
     </Grid>

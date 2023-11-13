@@ -44,64 +44,64 @@
                 <Setter Property="VerticalContentAlignment" Value="Center" />
             </Style>
         </Grid.Resources>
-        <Label Grid.Row="0" Grid.Column="0">名称</Label>
+        <Label Grid.Row="0" Grid.Column="0">Tên</Label>
         <TextBox Grid.Row="0" Grid.Column="1" Text="{Binding PetInfo.PetName}" />
-        <Label Grid.Row="1" Grid.Column="0">等级</Label>
+        <Label Grid.Row="1" Grid.Column="0">Cấp</Label>
         <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding PetInfo.Level}" />
-        <Label Grid.Row="2" Grid.Column="0">携带等级</Label>
+        <Label Grid.Row="2" Grid.Column="0">Cấp yêu cầu</Label>
         <TextBox Grid.Row="2" Grid.Column="1" Text="{Binding PetInfo.NeedLevel}" />
-        <Label Grid.Row="3" Grid.Column="0">性格</Label>
+        <Label Grid.Row="3" Grid.Column="0">Tính cách</Label>
         <ComboBox Grid.Row="3" Grid.Column="1" Margin="5"
                   VerticalContentAlignment="Center"
                   ItemsSource="{Binding AiTypeSelection}"
                   DisplayMemberPath="Title"
                   SelectedValuePath="Value"
                   SelectedValue="{Binding PetInfo.AiType}" />
-        <Label Grid.Row="4" Grid.Column="0">寿命</Label>
+        <Label Grid.Row="4" Grid.Column="0">Thọ mệnh</Label>
         <TextBox Grid.Row="4" Grid.Column="1" Text="{Binding PetInfo.Life}" />
         <Label Grid.Row="5" Grid.Column="0">PetType</Label>
         <TextBox Grid.Row="5" Grid.Column="1" Text="{Binding PetInfo.PetType}" />
         <Label Grid.Row="6" Grid.Column="0">Genera</Label>
         <TextBox Grid.Row="6" Grid.Column="1" Text="{Binding PetInfo.Genera}" />
-        <Label Grid.Row="7" Grid.Column="0">快乐</Label>
+        <Label Grid.Row="7" Grid.Column="0">Độ hoan hỉ</Label>
         <TextBox Grid.Row="7" Grid.Column="1" Text="{Binding PetInfo.Enjoy}" />
         <StackPanel Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Horizontal"
                     HorizontalAlignment="Right">
-            <Label Margin="5,0,0,0">悟性</Label>
+            <Label Margin="5,0,0,0">Ngộ tính</Label>
             <TextBox MinWidth="60" Text="{Binding PetInfo.Savvy}" />
-            <Label>根骨</Label>
+            <Label>Căn cốt</Label>
             <TextBox MinWidth="60" Text="{Binding PetInfo.Gengu}" />
         </StackPanel>
-        <Label Grid.Row="9" Grid.Column="0">成长率</Label>
+        <Label Grid.Row="9" Grid.Column="0">Trưởng thành</Label>
         <TextBox Grid.Row="9" Grid.Column="1" Text="{Binding PetInfo.GrowRate}" />
-        <Label Grid.Row="10" Grid.Column="0">潜能</Label>
+        <Label Grid.Row="10" Grid.Column="0">Tiềm năng</Label>
         <TextBox Grid.Row="10" Grid.Column="1" Text="{Binding PetInfo.Repoint}" />
-        <Label Grid.Row="11" Grid.Column="0">经验</Label>
+        <Label Grid.Row="11" Grid.Column="0">Kinh nghiệm</Label>
         <TextBox Grid.Row="11" Grid.Column="1" Text="{Binding PetInfo.Exp}" />
         <!--next column-->
-        <Label Grid.Row="0" Grid.Column="2">力量</Label>
+        <Label Grid.Row="0" Grid.Column="2">Cường lực</Label>
         <TextBox Grid.Row="0" Grid.Column="3" Text="{Binding PetInfo.Str}" />
-        <Label Grid.Row="1" Grid.Column="2">灵气</Label>
+        <Label Grid.Row="1" Grid.Column="2">Nội lực</Label>
         <TextBox Grid.Row="1" Grid.Column="3" Text="{Binding PetInfo.Spr}" />
-        <Label Grid.Row="2" Grid.Column="2">体力</Label>
+        <Label Grid.Row="2" Grid.Column="2">Thể lực</Label>
         <TextBox Grid.Row="2" Grid.Column="3" Text="{Binding PetInfo.Con}" />
-        <Label Grid.Row="3" Grid.Column="2">定力</Label>
+        <Label Grid.Row="3" Grid.Column="2">Trí lực</Label>
         <TextBox Grid.Row="3" Grid.Column="3" Text="{Binding PetInfo.Ipr}" />
-        <Label Grid.Row="4" Grid.Column="2">身法</Label>
+        <Label Grid.Row="4" Grid.Column="2">Thân pháp</Label>
         <TextBox Grid.Row="4" Grid.Column="3" Text="{Binding PetInfo.Dex}" />
-        <Label Grid.Row="5" Grid.Column="2">力量资质</Label>
+        <Label Grid.Row="5" Grid.Column="2">Tư chất cường lực</Label>
         <TextBox Grid.Row="5" Grid.Column="3" Text="{Binding PetInfo.StrPer}" />
-        <Label Grid.Row="6" Grid.Column="2">灵气资质</Label>
+        <Label Grid.Row="6" Grid.Column="2">Tư chất nội lực</Label>
         <TextBox Grid.Row="6" Grid.Column="3" Text="{Binding PetInfo.SprPer}" />
-        <Label Grid.Row="7" Grid.Column="2">体力资质</Label>
+        <Label Grid.Row="7" Grid.Column="2">Tư chất thể lực</Label>
         <TextBox Grid.Row="7" Grid.Column="3" Text="{Binding PetInfo.ConPer}" />
-        <Label Grid.Row="8" Grid.Column="2">定力资质</Label>
+        <Label Grid.Row="8" Grid.Column="2">Tư chất nội lực</Label>
         <TextBox Grid.Row="8" Grid.Column="3" Text="{Binding PetInfo.IprPer}" />
-        <Label Grid.Row="9" Grid.Column="2">身法资质</Label>
+        <Label Grid.Row="9" Grid.Column="2">Tư chất thân pháp</Label>
         <TextBox Grid.Row="9" Grid.Column="3" Text="{Binding PetInfo.DexPer}" />
         <Button Grid.Row="10" Grid.Column="2" Grid.ColumnSpan="2" Grid.RowSpan="2"
                 Margin="18,12" Command="{Binding SaveCommand}">
-            保存
+            Lưu
         </Button>
     </Grid>
 </Window>

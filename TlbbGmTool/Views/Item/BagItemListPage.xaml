@@ -17,41 +17,41 @@
                     <Setter Property="Padding" Value="10,5" />
                 </Style>
             </WrapPanel.Resources>
-            <Button Command="{Binding AddEquipCommand}" Visibility="{Binding AddEquipVisible}" Margin="0,0,6,0">发放装备</Button>
-            <Button Command="{Binding AddGemCommand}" Visibility="{Binding AddGemVisible}" Margin="0,0,6,0">发放宝石</Button>
-            <Button Command="{Binding AddItemCommand}">发放物品</Button>
+            <Button Command="{Binding AddEquipCommand}" Visibility="{Binding AddEquipVisible}" Margin="0,0,6,0">Tạo trang bị</Button>
+            <Button Command="{Binding AddGemCommand}" Visibility="{Binding AddGemVisible}" Margin="0,0,6,0">Tạo đá quý</Button>
+            <Button Command="{Binding AddItemCommand}">Tạo vật phẩm</Button>
         </WrapPanel>
         <DataGrid AutoGenerateColumns="False" CanUserAddRows="False" IsReadOnly="True"
                   Margin="10" ItemsSource="{Binding ItemsContainer.ItemList}">
             <DataGrid.Columns>
                 <DataGridTextColumn Width="50" ElementStyle="{StaticResource TextColumnStyle}"
                                     CellStyle="{StaticResource ItemCellStyle}"
-                                    Header="位置" Binding="{Binding Pos}" SortDirection="Ascending" />
+                                    Header="Vị trí" Binding="{Binding Pos}" SortDirection="Ascending" />
                 <DataGridTextColumn Width="3*" ElementStyle="{StaticResource TextColumnStyle}"
                                     CellStyle="{StaticResource ItemCellStyle}"
-                                    Header="物品ID" Binding="{Binding ItemBaseId}" />
+                                    Header="ID" Binding="{Binding ItemBaseId}" />
                 <DataGridTextColumn Width="4*" ElementStyle="{StaticResource TextColumnStyle}"
                                     CellStyle="{StaticResource ItemCellStyle}"
-                                    Header="名称" Binding="{Binding ItemName}" />
+                                    Header="Tên" Binding="{Binding ItemName}" />
                 <DataGridTextColumn Width="60" ElementStyle="{StaticResource TextColumnStyle}"
                                     CellStyle="{StaticResource ItemCellStyle}"
-                                    Header="等级" Binding="{Binding ItemLevel}" />
+                                    Header="Cấp" Binding="{Binding ItemLevel}" />
                 <DataGridTextColumn Width="60" ElementStyle="{StaticResource TextColumnStyle}"
                                     CellStyle="{StaticResource ItemCellStyle}"
-                                    Header="数量" Binding="{Binding ItemCount}" />
-                <DataGridTemplateColumn Width="188" Header="管理">
+                                    Header="Số lượng" Binding="{Binding ItemCount}" />
+                <DataGridTemplateColumn Width="188" Header="Quản lý">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <WrapPanel Margin="5">
-                                <Button Content="修改" Padding="10,5"
+                                <Button Content="Chỉnh sửa" Padding="10,5"
                                         Command="{Binding DataContext.EditItemCommand, 
                                             RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type DataGrid}}}"
                                         CommandParameter="{Binding}"/>
-                                <Button Content="复制" Padding="10,5" Margin="5,0,0,0"
+                                <Button Content="Sao chép" Padding="10,5" Margin="5,0,0,0"
                                         Command="{Binding DataContext.CopyItemCommand, 
                                             RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type DataGrid}}}"
                                         CommandParameter="{Binding}"/>
-                                <Button Content="删除" Padding="10,5" Margin="5,0,0,0"
+                                <Button Content="Xoá" Padding="10,5" Margin="5,0,0,0"
                                         Command="{Binding DataContext.DeleteItemCommand, 
                                             RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type DataGrid}}}"
                                         CommandParameter="{Binding}"/>

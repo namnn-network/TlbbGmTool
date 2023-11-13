@@ -24,7 +24,7 @@ public partial class MainWindow : Window
     {
         OpenFileDialog openFileDialog = new()
         {
-            Filter = "数据文件 (*.txt)|*.txt"
+            Filter = "Tệp tin dữ liệu (*.txt)|*.txt"
         };
         if (openFileDialog.ShowDialog() == true)
         {
@@ -88,11 +88,11 @@ public partial class MainWindow : Window
                 _dataTable = table;
                 grid.ItemsSource = table.DefaultView;
                 grid.Visibility = Visibility.Visible;
-                Title = "txt表格查看工具(" + path + ")";
+                Title = "Công cụ xem tệp tin txt(" + path + ")";
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"{ex.Message} {ex.StackTrace}", "出错了", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show($"{ex.Message} {ex.StackTrace}", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
     }

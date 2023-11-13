@@ -19,10 +19,10 @@
                             <ToolTip>
                                 <StackPanel>
                                     <TextBlock MaxWidth="240" Padding="8" TextWrapping="Wrap">
-                                        <Run Foreground="#FF615858">名称:</Run>
+                                        <Run Foreground="#FF615858">Tên:</Run>
                                         <Run Text="{Binding XinFaName, Mode=OneWay}" Foreground="#FFF12679" />
                                         <LineBreak />
-                                        <Run Foreground="#FF615858">描述:</Run>
+                                        <Run Foreground="#FF615858">Mô tả:</Run>
                                         <Run Text="{Binding XinFaDescription, Mode=OneWay}" Foreground="#FF0E3AEC" />
                                     </TextBlock>
                                 </StackPanel>
@@ -35,10 +35,10 @@
                 <DataGridTextColumn Width="2*" ElementStyle="{StaticResource TextColumnStyle}" CellStyle="{StaticResource ItemCellStyle}"
                                     Header="ID" Binding="{Binding XinFaId}" SortDirection="Ascending" />
                 <DataGridTextColumn Width="2*" ElementStyle="{StaticResource TextColumnStyle}" CellStyle="{StaticResource ItemCellStyle}"
-                                    Header="名称" Binding="{Binding XinFaName}" />
+                                    Header="Tâm pháp" Binding="{Binding XinFaName}" />
                 <DataGridTextColumn Width="2*" ElementStyle="{StaticResource TextColumnStyle}" CellStyle="{StaticResource ItemCellStyle}"
-                                    Header="等级" Binding="{Binding XinFaLevel}" />
-                <DataGridTemplateColumn Width="*" Header="管理">
+                                    Header="Cấp" Binding="{Binding XinFaLevel}" />
+                <DataGridTemplateColumn Width="*" Header="Danh sách">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <Button Margin="20,2" Padding="10,5"
@@ -46,7 +46,7 @@
                                     RelativeSource={RelativeSource FindAncestor, 
                                     AncestorType={x:Type DataGrid}}}"
                                     CommandParameter="{Binding DataContext, RelativeSource={RelativeSource Self}}">
-                                修改
+                                Chỉnh sửa
                             </Button>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>

@@ -30,7 +30,7 @@ public class MainWindowViewModel : ViewModelBase
     {
         get
         {
-            var title = "天龙八部GM工具 - by 流光";
+            var title = "Công cụ GM TLBB";
 #if DEBUG
             title = "[debug]" + title;
 #endif
@@ -41,7 +41,7 @@ public class MainWindowViewModel : ViewModelBase
 
             if (_mainWindowModel.DataStatus == DataStatus.Loading)
             {
-                title += "(加载配置中...)";
+                title += "(Đang tải cấu hình...)";
             }
 
             return title;
@@ -184,7 +184,7 @@ public class MainWindowViewModel : ViewModelBase
         catch (Exception e)
         {
             CurrentDbStatus = DbStatus.NotConnect;
-            ShowErrorMessage("连接数据库失败", e);
+            ShowErrorMessage("Không thể kết nối với cơ sở dữ liệu!", e);
             return;
         }
         CurrentDbStatus = DbStatus.Connected;
@@ -205,7 +205,7 @@ public class MainWindowViewModel : ViewModelBase
         {
             this.DataStatus = DataStatus.NotLoad;
             var stackTrace = (ex.InnerException ?? ex).StackTrace;
-            ShowErrorMessage("加载txt文件失败", $"{ex.Message}\n{stackTrace}");
+            ShowErrorMessage("Không tải được tệp txt", $"{ex.Message}\n{stackTrace}");
         }
     }
 
@@ -221,7 +221,7 @@ public class MainWindowViewModel : ViewModelBase
         }
         catch (Exception e)
         {
-            ShowErrorMessage("断开数据库失败", e);
+            ShowErrorMessage("Không thể ngắt kết nối cơ sở dữ liệu", e);
         }
         _mainWindowModel.DbVersion = string.Empty;
         RaisePropertyChanged(nameof(WindowTitle));
@@ -266,7 +266,7 @@ public class MainWindowViewModel : ViewModelBase
         }
         catch (Exception e)
         {
-            ShowErrorMessage("加载配置出错", e);
+            ShowErrorMessage("Lỗi tải cấu hình", e);
         }
     }
 

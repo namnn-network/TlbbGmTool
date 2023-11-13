@@ -40,7 +40,7 @@
         </Grid.ColumnDefinitions>
         <GroupBox Margin="5,0" Grid.ColumnSpan="4">
             <GroupBox.Header>
-                <Label>基本信息</Label>
+                <Label>Thông số cơ bản</Label>
             </GroupBox.Header>
             <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
                 <StackPanel.Resources>
@@ -57,29 +57,29 @@
                         <Setter Property="VerticalContentAlignment" Value="Center" />
                     </Style>
                 </StackPanel.Resources>
-                <Label>名称:</Label>
+                <Label>Tên:</Label>
                 <TextBox MinWidth="100" Text="{Binding EquipData.EquipName,Mode=OneWay}"
                          IsReadOnly="True" BorderThickness="0"
                          VerticalAlignment="Center" Height="22" />
-                <Button Margin="2,0,0,0" Command="{Binding SelectEquipCommand}">修改</Button>
-                <Label Margin="8,0,0,0">星级:</Label>
+                <Button Margin="2,0,0,0" Command="{Binding SelectEquipCommand}">Chỉnh sửa</Button>
+                <Label Margin="8,0,0,0">Số sao:</Label>
                 <ComboBox ItemsSource="{Binding StarSection}"
                           DisplayMemberPath="Title"
                           SelectedValuePath="Value"
                           SelectedValue="{Binding EquipData.StarCount}" />
-                <Label>孔数:</Label>
+                <Label>Số lỗ:</Label>
                 <ComboBox ItemsSource="{Binding GemMaxCountSection}"
                           DisplayMemberPath="Title"
                           SelectedValuePath="Value"
                           SelectedValue="{Binding EquipData.GemMaxCount}" />
-                <Label>外形:</Label>
+                <Label>Kiểu:</Label>
                 <Label MinWidth="100" Content="{Binding EquipData.VisualText,Mode=OneWay}" />
-                <Button Command="{Binding SelectVisualCommand}">切换</Button>
+                <Button Command="{Binding SelectVisualCommand}">Chọn</Button>
             </StackPanel>
         </GroupBox>
         <GroupBox Margin="5,0" Grid.Row="1" Grid.Column="0" Grid.RowSpan="3">
             <GroupBox.Header>
-                <Label>宝石</Label>
+                <Label>Đá quý</Label>
             </GroupBox.Header>
             <Grid>
                 <Grid.Resources>
@@ -101,18 +101,18 @@
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
                 <Label Grid.Row="0" Grid.Column="0" Content="{Binding EquipData.Gem0Text,Mode=OneWay}" />
-                <Button Grid.Row="0" Grid.Column="1" Command="{Binding SelectGem0Command}">选择</Button>
+                <Button Grid.Row="0" Grid.Column="1" Command="{Binding SelectGem0Command}">Chọn</Button>
                 <Label Grid.Row="1" Grid.Column="0" Content="{Binding EquipData.Gem1Text,Mode=OneWay}" />
-                <Button Grid.Row="1" Grid.Column="1" Command="{Binding SelectGem1Command}">选择</Button>
+                <Button Grid.Row="1" Grid.Column="1" Command="{Binding SelectGem1Command}">Chọn</Button>
                 <Label Grid.Row="2" Grid.Column="0" Content="{Binding EquipData.Gem2Text,Mode=OneWay}" />
-                <Button Grid.Row="2" Grid.Column="1" Command="{Binding SelectGem2Command}">选择</Button>
+                <Button Grid.Row="2" Grid.Column="1" Command="{Binding SelectGem2Command}">Chọn</Button>
                 <Label Grid.Row="3" Grid.Column="0" Content="{Binding EquipData.Gem3Text,Mode=OneWay}" />
-                <Button Grid.Row="3" Grid.Column="1" Command="{Binding SelectGem3Command}">选择</Button>
+                <Button Grid.Row="3" Grid.Column="1" Command="{Binding SelectGem3Command}">Chọn</Button>
             </Grid>
         </GroupBox>
         <GroupBox Margin="5,0" Grid.Row="1" Grid.Column="1" Grid.RowSpan="3">
             <GroupBox.Header>
-                <Label>属性种类</Label>
+                <Label>Loại thuộc tính</Label>
             </GroupBox.Header>
             <Grid>
                 <Grid.Resources>
@@ -135,13 +135,13 @@
                 <Label Grid.Row="1" Grid.Column="0" Content="{Binding EquipData.Attr1Tip,Mode=OneWay}" />
                 <Button Grid.Row="0" Grid.Column="1" Grid.RowSpan="2"
                         Command="{Binding SelectAttrCommand}">
-                    修改
+                    Chọn thuộc tính
                 </Button>
             </Grid>
         </GroupBox>
         <GroupBox Margin="5,0" Grid.Row="1" Grid.Column="2" Grid.RowSpan="2">
             <GroupBox.Header>
-                <Label>其他</Label>
+                <Label>Khác</Label>
             </GroupBox.Header>
             <Grid>
                 <Grid.Resources>
@@ -164,14 +164,14 @@
                     <ColumnDefinition Width="32" />
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
-                <Label Grid.Row="0" Grid.Column="0">强化:</Label>
+                <Label Grid.Row="0" Grid.Column="0">Cường hoá:</Label>
                 <Label Content="{Binding EquipData.EnhanceLevel}" MinWidth="25"
                        Grid.Row="0" Grid.Column="1" />
                 <Slider Margin="3,0,0,0" Value="{Binding EquipData.EnhanceLevel}" MinWidth="100"
                         Grid.Row="0" Grid.Column="2"
                         Minimum="0" Maximum="99"
                         TickFrequency="1" IsSnapToTickEnabled="True" />
-                <Label Grid.Row="1" Grid.Column="0">浮动值:</Label>
+                <Label Grid.Row="1" Grid.Column="0">Giá trị động:</Label>
                 <Label Content="{Binding EquipData.HiddenValue}" MinWidth="25"
                        Grid.Row="1" Grid.Column="1" />
                 <Slider Value="{Binding EquipData.HiddenValue}" Style="{StaticResource CommonSlider}"
@@ -180,7 +180,7 @@
         </GroupBox>
         <GroupBox Margin="5,0" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Grid.RowSpan="3">
             <GroupBox.Header>
-                <Label>资质</Label>
+                <Label>Tư chất</Label>
             </GroupBox.Header>
             <Grid>
                 <Grid.Resources>
@@ -207,39 +207,39 @@
                     <ColumnDefinition Width="2*" />
                     <ColumnDefinition Width="5*" />
                 </Grid.ColumnDefinitions>
-                <Label Grid.Row="0" Grid.Column="0">外功资质:</Label>
+                <Label Grid.Row="0" Grid.Column="0">Ngoại công:</Label>
                 <Label Content="{Binding EquipData.Aptitude0}" MinWidth="25"
                        Grid.Row="0" Grid.Column="1" />
                 <Slider Value="{Binding EquipData.Aptitude0}"
                         Grid.Row="0" Grid.Column="2"
                         Style="{StaticResource CommonSlider}" />
-                <Label Grid.Row="0" Grid.Column="3">外防资质:</Label>
+                <Label Grid.Row="0" Grid.Column="3">Ngoại phòng:</Label>
                 <Label Content="{Binding EquipData.Aptitude1}" MinWidth="25"
                        Grid.Row="0" Grid.Column="4" />
                 <Slider Value="{Binding EquipData.Aptitude1}"
                         Grid.Row="0" Grid.Column="5"
                         Style="{StaticResource CommonSlider}" />
                 <!--next row-->
-                <Label Grid.Row="1" Grid.Column="0">内功资质:</Label>
+                <Label Grid.Row="1" Grid.Column="0">Nội công:</Label>
                 <Label Content="{Binding EquipData.Aptitude2}" MinWidth="25"
                        Grid.Row="1" Grid.Column="1" />
                 <Slider Value="{Binding EquipData.Aptitude2}"
                         Grid.Row="1" Grid.Column="2"
                         Style="{StaticResource CommonSlider}" />
-                <Label Grid.Row="1" Grid.Column="3">内防资质:</Label>
+                <Label Grid.Row="1" Grid.Column="3">Nội phòng:</Label>
                 <Label Content="{Binding EquipData.Aptitude3}" MinWidth="25"
                        Grid.Row="1" Grid.Column="4" />
                 <Slider Value="{Binding EquipData.Aptitude3}"
                         Grid.Row="1" Grid.Column="5"
                         Style="{StaticResource CommonSlider}" />
                 <!--next row-->
-                <Label Grid.Row="2" Grid.Column="0">闪避资质:</Label>
+                <Label Grid.Row="2" Grid.Column="0">Né tránh:</Label>
                 <Label Content="{Binding EquipData.Aptitude4}" MinWidth="25"
                        Grid.Row="2" Grid.Column="1" />
                 <Slider Value="{Binding EquipData.Aptitude4}"
                         Grid.Row="2" Grid.Column="2"
                         Style="{StaticResource CommonSlider}" />
-                <Label Grid.Row="2" Grid.Column="3">命中资质:</Label>
+                <Label Grid.Row="2" Grid.Column="3">Chính xác:</Label>
                 <Label Content="{Binding EquipData.Aptitude5}" MinWidth="25"
                        Grid.Row="2" Grid.Column="4" />
                 <Slider Value="{Binding EquipData.Aptitude5}"
@@ -249,7 +249,7 @@
         </GroupBox>
         <GroupBox Margin="5,0" Grid.Row="3" Grid.Column="2" Grid.RowSpan="2">
             <GroupBox.Header>
-                <Label>状态</Label>
+                <Label>Trạng thái</Label>
             </GroupBox.Header>
             <Grid>
                 <Grid.RowDefinitions>
@@ -261,15 +261,15 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <CheckBox Grid.Row="0" Grid.Column="0" IsChecked="{Binding EquipData.IsBind}">已绑定</CheckBox>
-                <CheckBox Grid.Row="1" Grid.Column="0" IsChecked="{Binding EquipData.IsIden}">已鉴定</CheckBox>
-                <CheckBox Grid.Row="2" Grid.Column="0" IsChecked="{Binding EquipData.IsAptitudeIden}">资质已鉴定</CheckBox>
-                <CheckBox Grid.Row="0" Grid.Column="1" IsChecked="{Binding EquipData.IsEngraved}">已刻铭</CheckBox>
-                <CheckBox Grid.Row="1" Grid.Column="1" IsChecked="{Binding EquipData.IsPLock}">已锁定</CheckBox>
+                <CheckBox Grid.Row="0" Grid.Column="0" IsChecked="{Binding EquipData.IsBind}">Cố định</CheckBox>
+                <CheckBox Grid.Row="1" Grid.Column="0" IsChecked="{Binding EquipData.IsIden}">Đã giám định</CheckBox>
+                <CheckBox Grid.Row="2" Grid.Column="0" IsChecked="{Binding EquipData.IsAptitudeIden}">Tư chất đã giám định</CheckBox>
+                <CheckBox Grid.Row="0" Grid.Column="1" IsChecked="{Binding EquipData.IsEngraved}">Đã khắc minh</CheckBox>
+                <CheckBox Grid.Row="1" Grid.Column="1" IsChecked="{Binding EquipData.IsPLock}">Đã khoá</CheckBox>
             </Grid>
         </GroupBox>
         <DockPanel Margin="5" Grid.Row="5" Grid.Column="2">
-            <Button Command="{Binding SaveCommand}">保存</Button>
+            <Button Command="{Binding SaveCommand}">Lưu</Button>
         </DockPanel>
     </Grid>
 </Window>

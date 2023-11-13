@@ -44,17 +44,17 @@
                 <Setter Property="IsSnapToTickEnabled" Value="True" />
             </Style>
         </Grid.Resources>
-        <Label Grid.Row="0" Grid.Column="0">名称</Label>
+        <Label Grid.Row="0" Grid.Column="0">Tên</Label>
         <TextBox Grid.Row="0" Grid.Column="1"
                  IsReadOnly="True" BorderThickness="0"
                  Text="{Binding ItemData.ItemName,Mode=OneWay}" />
         <Button Grid.Row="0" Grid.Column="2" Margin="5"
-                Command="{Binding SelectItemCommand}">替换</Button>
-        <Label Grid.Row="1" Grid.Column="0">最大数量</Label>
+                Command="{Binding SelectItemCommand}">Thay thế</Button>
+        <Label Grid.Row="1" Grid.Column="0">Số tiền lớn nhất</Label>
         <TextBox Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2"
                  IsReadOnly="True" BorderThickness="0"
                  Text="{Binding ItemData.MaxSize,Mode=OneWay}" />
-        <Label Grid.Row="2" Grid.Column="0">数量</Label>
+        <Label Grid.Row="2" Grid.Column="0">Số lượng</Label>
         <Slider Grid.Row="2" Grid.Column="1"
                 Value="{Binding ItemData.Count}"
                 IsEnabled="{Binding CountEditorEnabled}"
@@ -64,6 +64,6 @@
                 IsEnabled="{Binding CountEditorEnabled}"
                  Text="{Binding ItemData.Count,UpdateSourceTrigger=PropertyChanged}" />
         <Button Grid.Row="3" Grid.Column="2" Margin="5"
-                Command="{Binding SaveCommand}">保存</Button>
+                Command="{Binding SaveCommand}">Lưu</Button>
     </Grid>
 </Window>

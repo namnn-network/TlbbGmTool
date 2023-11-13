@@ -44,76 +44,76 @@
                 <Setter Property="VerticalContentAlignment" Value="Center" />
             </Style>
         </Grid.Resources>
-        <Label Grid.Row="0" Grid.Column="0">角色ID</Label>
+        <Label Grid.Row="0" Grid.Column="0">ID Nhân vật</Label>
         <TextBox Grid.Row="0" Grid.Column="1" IsReadOnly="True" BorderThickness="0" Text="{Binding RoleInfo.CharGuid}" />
-        <Label Grid.Row="1" Grid.Column="0">账号</Label>
+        <Label Grid.Row="1" Grid.Column="0">Tài khoản</Label>
         <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding RoleInfo.AccName}" />
-        <Label Grid.Row="2" Grid.Column="0">角色名</Label>
+        <Label Grid.Row="2" Grid.Column="0">Nhân vật</Label>
         <TextBox Grid.Row="2" Grid.Column="1" Text="{Binding RoleInfo.CharName}" />
-        <Label Grid.Row="3" Grid.Column="0">称号</Label>
+        <Label Grid.Row="3" Grid.Column="0">Danh hiệu</Label>
         <TextBox Grid.Row="3" Grid.Column="1" Text="{Binding RoleInfo.Title}" />
-        <Label Grid.Row="4" Grid.Column="0">门派</Label>
+        <Label Grid.Row="4" Grid.Column="0">Môn phái</Label>
         <ComboBox Grid.Row="4" Grid.Column="1" Margin="5"
                   VerticalContentAlignment="Center"
                   ItemsSource="{Binding MenpaiSelection}"
                   DisplayMemberPath="Title"
                   SelectedValuePath="Value"
                   SelectedValue="{Binding RoleInfo.Menpai}" />
-        <Label Grid.Row="5" Grid.Column="0">等级</Label>
+        <Label Grid.Row="5" Grid.Column="0">Cấp</Label>
         <TextBox Grid.Row="5" Grid.Column="1" Text="{Binding RoleInfo.Level}" />
-        <Label Grid.Row="6" Grid.Column="0">当前血量</Label>
+        <Label Grid.Row="6" Grid.Column="0">HP</Label>
         <TextBox Grid.Row="6" Grid.Column="1" Text="{Binding RoleInfo.Hp}" />
-        <Label Grid.Row="7" Grid.Column="0">当前气量</Label>
+        <Label Grid.Row="7" Grid.Column="0">MP</Label>
         <TextBox Grid.Row="7" Grid.Column="1" Text="{Binding RoleInfo.Mp}" />
-        <Label Grid.Row="8" Grid.Column="0">经验值</Label>
+        <Label Grid.Row="8" Grid.Column="0">Kinh nghiệm</Label>
         <TextBox Grid.Row="8" Grid.Column="1" Text="{Binding RoleInfo.Exp}" />
-        <Label Grid.Row="9" Grid.Column="0">场景ID</Label>
+        <Label Grid.Row="9" Grid.Column="0">ID bản đồ</Label>
         <StackPanel Grid.Row="9" Grid.Column="1" Orientation="Horizontal">
             <TextBox MinWidth="60" Text="{Binding RoleInfo.Scene}" />
-            <Button Padding="12,5" Margin="5" Command="{Binding GoHomeCommand}">回城</Button>
+            <Button Padding="12,5" Margin="5" Command="{Binding GoHomeCommand}">Về thành</Button>
         </StackPanel>
-        <Label Grid.Row="10" Grid.Column="0">坐标</Label>
+        <Label Grid.Row="10" Grid.Column="0">Toạ độ</Label>
         <StackPanel Grid.Row="10" Grid.Column="1" Orientation="Horizontal">
             <TextBox MinWidth="60" Text="{Binding RoleInfo.XPos}" />
             <TextBox MinWidth="60" Text="{Binding RoleInfo.ZPos }" />
         </StackPanel>
         <!--next column-->
-        <Label Grid.Row="0" Grid.Column="2">力量</Label>
+        <Label Grid.Row="0" Grid.Column="2">Cường lực</Label>
         <TextBox Grid.Row="0" Grid.Column="3" Text="{Binding RoleInfo.Str}" />
-        <Label Grid.Row="1" Grid.Column="2">灵气</Label>
+        <Label Grid.Row="1" Grid.Column="2">Nội lực</Label>
         <TextBox Grid.Row="1" Grid.Column="3" Text="{Binding RoleInfo.Spr}" />
-        <Label Grid.Row="2" Grid.Column="2">体力</Label>
+        <Label Grid.Row="2" Grid.Column="2">Thể lực</Label>
         <TextBox Grid.Row="2" Grid.Column="3" Text="{Binding RoleInfo.Con}" />
-        <Label Grid.Row="3" Grid.Column="2">定力</Label>
+        <Label Grid.Row="3" Grid.Column="2">Trí lực</Label>
         <TextBox Grid.Row="3" Grid.Column="3" Text="{Binding RoleInfo.Ipr}" />
-        <Label Grid.Row="4" Grid.Column="2">身法</Label>
+        <Label Grid.Row="4" Grid.Column="2">Thân pháp</Label>
         <TextBox Grid.Row="4" Grid.Column="3" Text="{Binding RoleInfo.Dex}" />
-        <Label Grid.Row="5" Grid.Column="2">潜能</Label>
+        <Label Grid.Row="5" Grid.Column="2">Tiềm năng</Label>
         <TextBox Grid.Row="5" Grid.Column="3" Text="{Binding RoleInfo.Points}" />
-        <Label Grid.Row="6" Grid.Column="2">精力</Label>
+        <Label Grid.Row="6" Grid.Column="2">Tinh lực</Label>
         <TextBox Grid.Row="6" Grid.Column="3" Text="{Binding RoleInfo.Enegry}" />
-        <Label Grid.Row="7" Grid.Column="2">精力上限</Label>
+        <Label Grid.Row="7" Grid.Column="2">Tinh lực MAX</Label>
         <TextBox Grid.Row="7" Grid.Column="3" Text="{Binding RoleInfo.EnergyMax}" />
-        <Label Grid.Row="8" Grid.Column="2">活力</Label>
+        <Label Grid.Row="8" Grid.Column="2">Hoạt lực</Label>
         <TextBox Grid.Row="8" Grid.Column="3" Text="{Binding RoleInfo.Vigor}" />
-        <Label Grid.Row="9" Grid.Column="2">活力上限</Label>
+        <Label Grid.Row="9" Grid.Column="2">Hoạt lực MAX</Label>
         <TextBox Grid.Row="9" Grid.Column="3" Text="{Binding RoleInfo.MaxVigor}" />
-        <Label Grid.Row="10" Grid.Column="2">Pk值</Label>
+        <Label Grid.Row="10" Grid.Column="2">Sát khí</Label>
         <TextBox Grid.Row="10" Grid.Column="3" Text="{Binding RoleInfo.PkValue}" />
         <!--next column-->
-        <Label Grid.Row="0" Grid.Column="4">金币</Label>
+        <Label Grid.Row="0" Grid.Column="4">Vàng</Label>
         <TextBox Grid.Row="0" Grid.Column="5" Text="{Binding RoleInfo.VMoney}" />
-        <Label Grid.Row="1" Grid.Column="4">仓库金币</Label>
+        <Label Grid.Row="1" Grid.Column="4">Vàng thương khố</Label>
         <TextBox Grid.Row="1" Grid.Column="5" Text="{Binding RoleInfo.BankMoney}" />
-        <Label Grid.Row="2" Grid.Column="4">元宝</Label>
+        <Label Grid.Row="2" Grid.Column="4">KNB</Label>
         <TextBox Grid.Row="2" Grid.Column="5" Text="{Binding RoleInfo.YuanBao}" />
-        <Label Grid.Row="3" Grid.Column="4">赠点</Label>
+        <Label Grid.Row="3" Grid.Column="4">Điểm tặng</Label>
         <TextBox Grid.Row="3" Grid.Column="5" Text="{Binding RoleInfo.ZengDian}" />
-        <Label Grid.Row="4" Grid.Column="4">门贡</Label>
+        <Label Grid.Row="4" Grid.Column="4">Điểm MP</Label>
         <TextBox Grid.Row="4" Grid.Column="5" Text="{Binding RoleInfo.MenpaiPoint}" />
         <Button Grid.Row="5" Grid.Column="4" Grid.ColumnSpan="2" Grid.RowSpan="2"
                 Margin="30,12" Command="{Binding SaveRoleCommand}">
-            保存
+            Lưu
         </Button>
     </Grid>
 </Page>

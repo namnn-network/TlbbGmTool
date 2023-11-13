@@ -16,10 +16,10 @@
                 <DataGridTextColumn Width="3*" ElementStyle="{StaticResource TextColumnStyle}"
                                     Header="ID" Binding="{Binding Id}" SortDirection="Ascending" />
                 <DataGridTextColumn Width="4*" ElementStyle="{StaticResource TextColumnStyle}"
-                                    Header="名称" Binding="{Binding PetName}" />
+                                    Header="Tên" Binding="{Binding PetName}" />
                 <DataGridTextColumn Width="*" ElementStyle="{StaticResource TextColumnStyle}"
-                                    Header="等级" Binding="{Binding Level}" />
-                <DataGridTemplateColumn Width="240" Header="管理">
+                                    Header="Cấp" Binding="{Binding Level}" />
+                <DataGridTemplateColumn Width="240" Header="Quản lý">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <WrapPanel Margin="5">
@@ -28,21 +28,21 @@
                                         RelativeSource={RelativeSource FindAncestor, 
                                         AncestorType={x:Type DataGrid}}}"
                                         CommandParameter="{Binding DataContext, RelativeSource={RelativeSource Self}}">
-                                    修改属性
+                                    Chỉnh sửa
                                 </Button>
                                 <Button Padding="5" Margin="5,0,0,0"
                                         Command="{Binding DataContext.EditPetSkillCommand, 
                                         RelativeSource={RelativeSource FindAncestor, 
                                         AncestorType={x:Type DataGrid}}}"
                                         CommandParameter="{Binding DataContext, RelativeSource={RelativeSource Self}}">
-                                    修改技能
+                                    Chỉnh sửa kỹ năng
                                 </Button>
                                 <Button Padding="5" Margin="5,0,0,0"
                                         Command="{Binding DataContext.DeletePetCommand, 
                                         RelativeSource={RelativeSource FindAncestor, 
                                         AncestorType={x:Type DataGrid}}}"
                                         CommandParameter="{Binding DataContext, RelativeSource={RelativeSource Self}}">
-                                    删除珍兽
+                                    Xoá
                                 </Button>
                             </WrapPanel>
                         </DataTemplate>

@@ -8,7 +8,7 @@
         WindowStartupLocation="CenterOwner"
         ResizeMode="CanMinimize"
         ShowInTaskbar="False"
-        Title="修改心法等级" Width="290" Height="160">
+        Title="Thay đổi cấp độ tâm pháp" Width="290" Height="160">
     <Window.DataContext>
         <vm:XinFaEditorViewModel />
     </Window.DataContext>
@@ -33,11 +33,11 @@
         <Label Grid.Row="0" Grid.Column="0">ID</Label>
         <TextBox Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" Text="{Binding XinFaLog.XinFaId,Mode=OneWay}" 
                  IsReadOnly="True" BorderThickness="0" />
-        <Label Grid.Row="1" Grid.Column="0">名称</Label>
+        <Label Grid.Row="1" Grid.Column="0">Tâm pháp</Label>
         <TextBox Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Text="{Binding XinFaLog.XinFaName,Mode=OneWay}" 
                  IsReadOnly="True" BorderThickness="0" />
-        <Label Grid.Row="2" Grid.Column="0">等级</Label>
+        <Label Grid.Row="2" Grid.Column="0">Cấp</Label>
         <TextBox Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" Text="{Binding XinFaLog.XinFaLevel}" />
-        <Button Grid.Row="3" Grid.Column="2" Margin="0,3" Command="{Binding SaveCommand}">保存</Button>
+        <Button Grid.Row="3" Grid.Column="2" Margin="0,3" Command="{Binding SaveCommand}">Lưu</Button>
     </Grid>
 </Window>

@@ -52,7 +52,7 @@ public static class AxpService
                 }
                 catch (Exception ex)
                 {
-                    throw new Exception($"解析文件{filePath}出错,{ex.Message}", ex);
+                    throw new Exception($"Phân tích tệp tin {filePath} thất bại,{ex.Message}", ex);
                 }
                 return fileResult;
             }
@@ -61,7 +61,7 @@ public static class AxpService
         var blockNode = axpFile.GetBlockNode(filename);
         if (!blockNode.HasValue)
         {
-            throw new Exception("axp中未找到文件" + filename);
+            throw new Exception("Không tìm thấy tệp tin axp" + filename);
         }
         axpFileStream.Seek(blockNode.Value.DataOffset, SeekOrigin.Begin);
         try
@@ -70,7 +70,7 @@ public static class AxpService
         }
         catch (Exception ex)
         {
-            throw new Exception($"解析axp中文件{filename}出错,{ex.Message}", ex);
+            throw new Exception($"Lỗi phân tích tệp tin axp {filename} thất bại,{ex.Message}", ex);
         }
         return fileResult;
     }

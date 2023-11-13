@@ -23,6 +23,6 @@ public static class ItemService
         {
             return $"{itemBaseInfo.Name}(ID: {itemBaseId})";
         }
-        return $"未知物品(ID: {itemBaseId})";
+        return $"Vật phẩm không xác định (ID: {itemBaseId})";
     }
 }

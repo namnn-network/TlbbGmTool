@@ -34,11 +34,11 @@ public class AccountEditorViewModel : ViewModelBase
     }
     public ObservableCollection<UserAccountViewModel>? AccountList { get; set; }
 
-    public string WindowTitle => (_inputUserAccount is null) ? "添加新账号" : "修改账户信息";
+    public string WindowTitle => (_inputUserAccount is null) ? "Thêm tài khoản mới" : "Sửa thông tin tài khoản";
 
     public List<ComboBoxNode<bool>> StatusSelectionList { get; } = new() {
-        new("正常",false),
-        new("已锁定",true),
+        new("Bình thường",false),
+        new("Bị khoá",true),
     };
 
     public bool IsSaving
@@ -100,12 +100,12 @@ public class AccountEditorViewModel : ViewModelBase
                 });
                 AccountList.Add(_userAccount);
             }
-            ShowMessage("保存成功", "保存账号信息成功");
+            ShowMessage("Đã lưu thành công", "Thông tin tài khoản được lưu thành công");
             OwnedWindow?.Close();
         }
         catch (Exception ex)
         {
-            ShowErrorMessage("保存失败", ex);
+            ShowErrorMessage("Lưu không thành công", ex);
         }
         finally
         {

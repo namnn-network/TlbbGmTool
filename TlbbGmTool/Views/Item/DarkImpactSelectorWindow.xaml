@@ -6,7 +6,7 @@
         xmlns:vm="clr-namespace:liuguang.TlbbGmTool.ViewModels"
         mc:Ignorable="d"
         ShowInTaskbar="False" WindowStartupLocation="CenterOwner"
-        Title="暗器技能选择" Height="500" Width="520">
+        Title="Lựa chọn kỹ năng vũ khí" Height="500" Width="520">
     <Window.DataContext>
         <vm:DarkImpactSelectorViewModel />
     </Window.DataContext>
@@ -17,7 +17,7 @@
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
         <WrapPanel Grid.Row="0">
-            <Label>名称筛选</Label>
+            <Label>Bộ lọc</Label>
             <TextBox MinWidth="120" Style="{StaticResource CommonTextBoxStyle}"
                      Text="{Binding SearchText,UpdateSourceTrigger=PropertyChanged}" />
         </WrapPanel>
@@ -48,8 +48,8 @@
                                     Header="ID" Binding="{Binding Value}" SortDirection="Ascending" />
                 <DataGridTextColumn Width="3*" ElementStyle="{StaticResource TextColumnStyle}"
                                     CellStyle="{StaticResource DarkCellStyle}"
-                                    Header="名称" Binding="{Binding Title}" />
-                <DataGridTemplateColumn Header="管理" Width="90">
+                                    Header="Tên" Binding="{Binding Title}" />
+                <DataGridTemplateColumn Header="Quản lý" Width="90">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <Button
@@ -59,7 +59,7 @@
                                 RelativeSource={RelativeSource FindAncestor, 
                                 AncestorType={x:Type DataGrid}}}"
                                 CommandParameter="{Binding DataContext, RelativeSource={RelativeSource Self}}">
-                                选择
+                                Chọn
                             </Button>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
@@ -72,11 +72,11 @@
                     <Setter Property="Padding" Value="10,5" />
                 </Style>
             </WrapPanel.Resources>
-            <Button Command="{Binding Pagination.FirstPageCommand}">首页</Button>
-            <Button Margin="5,0" Command="{Binding Pagination.PrevPageCommand}">上一页</Button>
+            <Button Command="{Binding Pagination.FirstPageCommand}">Trang đầu</Button>
+            <Button Margin="5,0" Command="{Binding Pagination.PrevPageCommand}">Trang trước</Button>
             <Label MinWidth="60" Content="{Binding Pagination.PageTip}" />
-            <Button Margin="5,0" Command="{Binding Pagination.NextPageCommand}">下一页</Button>
-            <Button Command="{Binding Pagination.LastPageCommand}">末页</Button>
+            <Button Margin="5,0" Command="{Binding Pagination.NextPageCommand}">Trang sau</Button>
+            <Button Command="{Binding Pagination.LastPageCommand}">Trang cuối</Button>
         </WrapPanel>
     </Grid>
 </Window>

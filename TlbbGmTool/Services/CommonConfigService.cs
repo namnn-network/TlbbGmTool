@@ -30,7 +30,7 @@ public static class CommonConfigService
         var configFilePath = GetConfigFilePath();
         if (!File.Exists(configFilePath))
         {
-            throw new Exception($"配置文件{configFilePath}不存在");
+            throw new Exception($"Tập tin cấu hình {configFilePath} không tồn tại!");
         }
 
         string fileContent;
@@ -42,7 +42,7 @@ public static class CommonConfigService
             }
             catch (Exception e)
             {
-                throw new Exception($"读取配置文件{configFilePath}出错,{e.Message}");
+                throw new Exception($"Đọc tập tin cấu hình {configFilePath} thất bại,{e.Message}");
             }
         }
 
@@ -53,7 +53,7 @@ public static class CommonConfigService
         }
         catch (Exception e)
         {
-            throw new Exception($"解析配置文件{configFilePath}出错,{e.Message}");
+            throw new Exception($"Phân tích tập tin cấu hình {configFilePath} thất bại,{e.Message}");
         }
         LoadXmlItems(commonXml, "menpai", menpaiMap);
         LoadXmlItems(commonXml, "attr1", attr1Map);

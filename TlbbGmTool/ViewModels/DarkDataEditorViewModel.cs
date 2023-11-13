@@ -65,7 +65,7 @@ public class DarkDataEditorViewModel : ViewModelBase
                 impactId = _darkData.Impact2;
                 break;
             default:
-                ShowErrorMessage("出错了", $"无效的技能位置: {impactIndex}");
+                ShowErrorMessage("Lỗi", $"Vị trí kỹ năng không hợp lệ: {impactIndex}");
                 return;
         }
         var selectorWindow = new DarkImpactSelectorWindow();

@@ -17,10 +17,10 @@ public class PetSkillViewModel
             switch (_baseInfo.SkillType)
             {
                 case 0:
-                    typeText = "手动";
+                    typeText = "Chủ động";
                     break;
                 case 1:
-                    typeText = "自动";
+                    typeText = "Bị động";
                     break;
                 case 2:
                     typeText = "buff";

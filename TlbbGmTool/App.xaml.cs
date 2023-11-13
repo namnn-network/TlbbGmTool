@@ -24,7 +24,7 @@ public partial class App : Application
         }
 
         MessageBox.Show(messageContent,
-            "程序出现未捕获的异常", MessageBoxButton.OK, MessageBoxImage.Error);
+            "Một ngoại lệ chưa được phát hiện đã xảy ra trong chương trình!", MessageBoxButton.OK, MessageBoxImage.Error);
         Current.Shutdown();
     }
 }

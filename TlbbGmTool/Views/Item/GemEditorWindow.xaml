@@ -34,13 +34,13 @@
                 <Setter Property="Padding" Value="13,6" />
             </Style>
         </Grid.Resources>
-        <Label Grid.Row="0" Grid.Column="0">名称</Label>
+        <Label Grid.Row="0" Grid.Column="0">Danh hiệu</Label>
         <TextBox Grid.Row="0" Grid.Column="1"
                  IsReadOnly="True" BorderThickness="0"
                  Text="{Binding ItemData.ItemName,Mode=OneWay}"/>
         <Button Grid.Row="0" Grid.Column="2" Margin="5"
-                Command="{Binding SelectItemCommand}">替换</Button>
+                Command="{Binding SelectItemCommand}">Chọn</Button>
         <Button Grid.Row="1" Grid.Column="2" Margin="5"
-                Command="{Binding SaveCommand}">保存</Button>
+                Command="{Binding SaveCommand}">Lưu</Button>
     </Grid>
 </Window>

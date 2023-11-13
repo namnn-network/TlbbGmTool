@@ -6,7 +6,7 @@
         xmlns:vm="clr-namespace:liuguang.TlbbGmTool.ViewModels"
         mc:Ignorable="d"
         ShowInTaskbar="False" WindowStartupLocation="CenterOwner"
-        Title="选择属性类型(最多16条)" Height="540" Width="700">
+        Title="Chọn loại thuộc tính (Tối đa 16)" Height="540" Width="700">
     <Window.DataContext>
         <vm:AttrSelectorViewModel />
     </Window.DataContext>
@@ -18,7 +18,7 @@
         </Grid.RowDefinitions>
         <GroupBox Margin="5,0" Grid.Row="0">
             <GroupBox.Header>
-                <Label>属性分组1</Label>
+                <Label>Nhóm thuộc tính 1</Label>
             </GroupBox.Header>
             <Grid>
                 <ItemsControl ItemsSource="{Binding Attr0Selection}">
@@ -43,7 +43,7 @@
         </GroupBox>
         <GroupBox Margin="5,0" Grid.Row="1">
             <GroupBox.Header>
-                <Label>属性分组2</Label>
+                <Label>Nhóm thuộc tính 2</Label>
             </GroupBox.Header>
             <Grid>
                 <ItemsControl ItemsSource="{Binding Attr1Selection}">
@@ -74,7 +74,7 @@
             </WrapPanel.Resources>
             <Button Margin="5"
                     Command="{Binding ConfirmCommand}">
-                确定
+                Xác nhận
             </Button>
         </WrapPanel>
     </Grid>

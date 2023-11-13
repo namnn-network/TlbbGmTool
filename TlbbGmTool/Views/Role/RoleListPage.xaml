@@ -17,29 +17,29 @@
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
         <WrapPanel Grid.Row="0" Margin="0,5">
-            <Label Content="角色关键词" />
+            <Label Content="Từ khoá vai trò" />
             <TextBox Margin="8,0,0,0" MinWidth="150" Style="{StaticResource CommonTextBoxStyle}"
                      Text="{Binding RoleSearchText}" />
-            <Label Margin="13,0,0,0" Content="账号关键词" />
+            <Label Margin="13,0,0,0" Content="Từ khoá nhân vật" />
             <TextBox Margin="8,0,0,0" MinWidth="150" Style="{StaticResource CommonTextBoxStyle}"
                      Text="{Binding AccountSearchText}" />
-            <Button Margin="15,0,0,0" Padding="15,0" Command="{Binding SearchCommand}">搜索</Button>
+            <Button Margin="15,0,0,0" Padding="15,0" Command="{Binding SearchCommand}">Tìm kiếm</Button>
         </WrapPanel>
         <DataGrid Grid.Row="1" Style="{StaticResource DataGridStyle}" Margin="10,0" ItemsSource="{Binding RoleList}">
             <DataGrid.Columns>
                 <DataGridTextColumn Width="86" ElementStyle="{StaticResource TextColumnStyle}"
-                                    Header="角色ID" Binding="{Binding CharGuid}" SortDirection="Ascending" />
+                                    Header="ID" Binding="{Binding CharGuid}" SortDirection="Ascending" />
                 <DataGridTextColumn Width="100" ElementStyle="{StaticResource TextColumnStyle}"
-                                    Header="角色名" Binding="{Binding CharName}" />
+                                    Header="Tên NV" Binding="{Binding CharName}" />
                 <DataGridTextColumn Width="*" ElementStyle="{StaticResource TextColumnStyle}"
-                                    Header="账号" Binding="{Binding AccName}" />
+                                    Header="Tài khoản" Binding="{Binding AccName}" />
                 <DataGridTextColumn Width="80" ElementStyle="{StaticResource TextColumnStyle}"
-                                    Header="门派" Binding="{Binding MenpaiText}" />
+                                    Header="Môn phái" Binding="{Binding MenpaiText}" />
                 <DataGridTextColumn Width="50" ElementStyle="{StaticResource TextColumnStyle}"
-                                    Header="等级" Binding="{Binding Level}" />
+                                    Header="Cấp" Binding="{Binding Level}" />
                 <DataGridTextColumn Width="80" ElementStyle="{StaticResource TextColumnStyle}"
-                                    Header="元宝" Binding="{Binding YuanBao}" />
-                <DataGridTemplateColumn Header="管理" Width="130">
+                                    Header="KNB" Binding="{Binding YuanBao}" />
+                <DataGridTemplateColumn Header="Quản lý" Width="130">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <WrapPanel>
@@ -50,17 +50,17 @@
                                     </Style>
                                 </WrapPanel.Resources>
                                 <Button
-                                    Content="修改"
+                                    Content="Sửa vai trò"
                                     Command="{Binding DataContext.EditRoleCommand, 
                                     RelativeSource={RelativeSource FindAncestor, 
                                     AncestorType={x:Type DataGrid}}}"
                                     CommandParameter="{Binding DataContext, RelativeSource={RelativeSource Self}}" />
-                                <Button Content="封禁"
+                                <Button Content="Khoá"
                                         Command="{Binding DataContext.BanRoleCommand, 
                                     RelativeSource={RelativeSource FindAncestor, 
                                     AncestorType={x:Type DataGrid}}}"
                                         CommandParameter="{Binding DataContext, RelativeSource={RelativeSource Self}}" />
-                                <Button Content="解封"
+                                <Button Content="Mở khoá"
                                         Command="{Binding DataContext.UnBanRoleCommand, 
                                     RelativeSource={RelativeSource FindAncestor, 
                                     AncestorType={x:Type DataGrid}}}"

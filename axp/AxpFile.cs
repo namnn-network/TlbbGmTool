@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Security.Policy;
@@ -28,11 +28,11 @@ public class AxpFile
         var head = await LoadFileHeadAsync(fileStream);
         if (head.Identity != AXP_IDENTITY)
         {
-            throw new Exception("不是axp文件");
+            throw new Exception("Không phải tệp tin axp");
         }
         if (head.EditFlag != 0)
         {
-            throw new Exception("AXP文件正在编辑中");
+            throw new Exception("Tệp tin AXP đang được chỉnh sửa");
         }
         var hashTable = new List<AxpHashNode>();
         var blockTable = new List<AxpBlockNode>();

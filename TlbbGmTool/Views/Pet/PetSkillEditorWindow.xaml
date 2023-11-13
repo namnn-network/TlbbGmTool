@@ -17,14 +17,14 @@
             <RowDefinition Height="35" />
         </Grid.RowDefinitions>
         <WrapPanel Grid.Row="0">
-            <Label>类型</Label>
+            <Label>Loại hình</Label>
             <ComboBox MinWidth="80" Margin="5,0"
                       VerticalContentAlignment="Center"
                       ItemsSource="{Binding SkillTypeSelection}"
                       SelectedValue="{Binding SearchSkillType}"
                       SelectedValuePath="Value"
                       DisplayMemberPath="Title" />
-            <Label>名称筛选</Label>
+            <Label>Tìm kiếm</Label>
             <TextBox MinWidth="60" Margin="5,0"
                      Style="{StaticResource CommonTextBoxStyle}"
                      Text="{Binding SearchText,UpdateSourceTrigger=PropertyChanged}" />
@@ -33,7 +33,7 @@
                       ItemsSource="{Binding SkillSelection}"
                       SelectedItem="{Binding SelectedSkill}"
                       DisplayMemberPath="Name" />
-            <Button Margin="5,0,0,0" Padding="5,0" Command="{Binding AddPetSkillCommand}">添加技能</Button>
+            <Button Margin="5,0,0,0" Padding="5,0" Command="{Binding AddPetSkillCommand}">Thêm mới</Button>
         </WrapPanel>
         <DataGrid Grid.Row="1" Style="{StaticResource DataGridStyle}" Margin="0,10,0,0" ItemsSource="{Binding SkillList}">
             <DataGrid.Resources>
@@ -43,10 +43,10 @@
                             <ToolTip>
                                 <StackPanel>
                                     <TextBlock MaxWidth="240" Padding="8" TextWrapping="Wrap">
-                                        <Run Foreground="#FF615858">名称:</Run>
+                                        <Run Foreground="#FF615858">Tên:</Run>
                                         <Run Text="{Binding Name, Mode=OneWay}" Foreground="#FFF12679" />
                                         <LineBreak />
-                                        <Run Foreground="#FF615858">描述:</Run>
+                                        <Run Foreground="#FF615858">Mô tả:</Run>
                                         <Run Text="{Binding Description, Mode=OneWay}" Foreground="#FF0E3AEC" />
                                     </TextBlock>
                                 </StackPanel>
@@ -57,12 +57,12 @@
             </DataGrid.Resources>
             <DataGrid.Columns>
                 <DataGridTextColumn Width="*" ElementStyle="{StaticResource TextColumnStyle}" CellStyle="{StaticResource ItemCellStyle}"
-                                    Header="技能ID" Binding="{Binding Id}" />
+                                    Header="ID kỹ năng" Binding="{Binding Id}" />
                 <DataGridTextColumn Width="*" ElementStyle="{StaticResource TextColumnStyle}" CellStyle="{StaticResource ItemCellStyle}"
-                                    Header="技能名称" Binding="{Binding Name}" />
+                                    Header="Tên kỹ năng" Binding="{Binding Name}" />
                 <DataGridTextColumn Width="*" ElementStyle="{StaticResource TextColumnStyle}" CellStyle="{StaticResource ItemCellStyle}"
-                                    Header="技能类型" Binding="{Binding SkillTypeText}" />
-                <DataGridTemplateColumn Header="管理" Width="*">
+                                    Header="Loại kỹ năng" Binding="{Binding SkillTypeText}" />
+                <DataGridTemplateColumn Header="Quản lý" Width="*">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <WrapPanel Margin="5">
@@ -71,7 +71,7 @@
                                         RelativeSource={RelativeSource FindAncestor, 
                                         AncestorType={x:Type DataGrid}}}"
                                         CommandParameter="{Binding DataContext, RelativeSource={RelativeSource Self}}">
-                                    删除
+                                    Xoá kỹ năng
                                 </Button>
                             </WrapPanel>
                         </DataTemplate>
@@ -80,7 +80,7 @@
             </DataGrid.Columns>
         </DataGrid>
         <WrapPanel Grid.Row="2" Margin="0,5,0,0" HorizontalAlignment="Right">
-            <Button Height="30" Padding="15,0" Command="{Binding SaveCommand}">保存</Button>
+            <Button Height="30" Padding="15,0" Command="{Binding SaveCommand}">Lưu</Button>
         </WrapPanel>
     </Grid>
 </Window>

@@ -74,7 +74,7 @@ public class RoleListViewModel : ViewModelBase
         }
         catch (Exception ex)
         {
-            ShowErrorMessage("搜索出错", ex);
+            ShowErrorMessage("Tìm kiếm thất bại", ex);
         }
         finally
         {
@@ -190,8 +190,8 @@ public class RoleListViewModel : ViewModelBase
         {
             return;
         }
-        var tipText = isBanRole ? "封禁" : "解封";
-        if (!Confirm("操作提示", $"你确定要{tipText}角色 {roleInfo.CharName}吗?"))
+        var tipText = isBanRole ? "Khoá" : "Mở khoá";
+        if (!Confirm("Xác nhận", $"Chắc chắn muốn {tipText} {roleInfo.CharName}?"))
         {
             return;
         }
@@ -204,12 +204,12 @@ public class RoleListViewModel : ViewModelBase
         }
         catch (Exception ex)
         {
-            ShowErrorMessage($"{tipText}失败", ex);
+            ShowErrorMessage($"{tipText} không thành công", ex);
             return;
         }
 
-        ShowMessage($"{tipText}成功",
-            $"{tipText}角色 {roleInfo.CharName}成功");
+        ShowMessage($"{tipText} thành công",
+            $"{tipText} thành công {roleInfo.CharName}!");
     }
 
     private async Task UpdateRoleSettingsAsync(DbConnection dbConnection, int charguid, bool isBanRole)

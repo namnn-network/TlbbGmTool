@@ -31,7 +31,7 @@ public class ServerEditorViewModel : ViewModelBase
     }
     public ObservableCollection<GameServerViewModel>? ServerList { get; set; }
 
-    public string WindowTitle => (_inputServerInfo is null) ? "添加服务器" : "修改服务器";
+    public string WindowTitle => (_inputServerInfo is null) ? "Thêm máy chủ" : "Sửa máy chủ";
 
     public Command SaveServerCommand { get; }
 
@@ -89,7 +89,7 @@ public class ServerEditorViewModel : ViewModelBase
         var configAxpPath = Path.Combine(ServerInfo.ClientPath, "Data", "Config.axp");
         if (!File.Exists(configAxpPath))
         {
-            ShowErrorMessage("无效的路径", $"客户端路径[{ServerInfo.ClientPath}]无效");
+            ShowErrorMessage("Thư mục không tồn tại", $"Thư mục không tồn tại [{ServerInfo.ClientPath}]!");
             return;
         }
         //
@@ -115,7 +115,7 @@ public class ServerEditorViewModel : ViewModelBase
         }
         catch (Exception ex)
         {
-            ShowErrorMessage("保存配置失败", ex);
+            ShowErrorMessage("Lưu thông tin không thành công!", ex);
             return;
         }
         OwnedWindow?.Close();
@@ -151,7 +151,7 @@ public class ServerEditorViewModel : ViewModelBase
         }
         catch (Exception e)
         {
-            ShowErrorMessage("连接失败", e);
+            ShowErrorMessage("Kết nối không thành công", e);
             return;
         }
         finally
@@ -160,6 +160,6 @@ public class ServerEditorViewModel : ViewModelBase
             _isConnecting = false;
             ConnTestCommand.RaiseCanExecuteChanged();
         }
-        ShowMessage("连接成功", "连接数据库成功");
+        ShowMessage("Kết nối thành công", "Kết nối máy chủ thành công");
     }
 }

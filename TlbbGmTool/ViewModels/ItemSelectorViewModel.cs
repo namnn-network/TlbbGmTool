@@ -23,7 +23,7 @@ public class ItemSelectorViewModel : ViewModelBase
     private List<ItemBaseViewModel> _filterItemList = new();
     private int _initItemId;
 
-    private string _windowTitle = "物品选择器";
+    private string _windowTitle = "Chọn mục";
     private int _selectedType = 0;
     private byte? _minLevel;
     private byte? _maxLevel;

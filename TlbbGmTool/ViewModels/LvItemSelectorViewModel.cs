@@ -23,7 +23,7 @@ public class LvItemSelectorViewModel : ViewModelBase
     private List<ItemBaseViewModel> _filterItemList = new();
     private int _initItemId;
 
-    private string _windowTitle = "物品选择器";
+    private string _windowTitle = "Chọn mục";
     private int _selectedType = 0;
     private byte _selectedLevel;
     private string _searchText = string.Empty;
@@ -89,10 +89,10 @@ public class LvItemSelectorViewModel : ViewModelBase
     }
 
     public List<ComboBoxNode<int>> ShortTypeSelection { get; } = new() {
-        new("全部",0)
+        new("Tất cả",0)
     };
     public List<ComboBoxNode<byte>> LevelSelection { get; } = new() {
-        new("全部",0)
+        new("Tất cả",0)
     };
 
     public IEnumerable<ItemBaseViewModel> CurrentPageItemList
@@ -146,7 +146,7 @@ public class LvItemSelectorViewModel : ViewModelBase
         });
         foreach (var levelValue in levels)
         {
-            LevelSelection.Add(new($"{levelValue}级", levelValue));
+            LevelSelection.Add(new($"cấp {levelValue}", levelValue));
         }
         RaisePropertyChanged(nameof(LevelSelection));
     }

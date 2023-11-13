@@ -58,7 +58,7 @@ public class PetListViewModel : ViewModelBase
         }
         catch (Exception ex)
         {
-            ShowErrorMessage("加载出错", ex);
+            ShowErrorMessage("Lỗi tải dữ liệu", ex);
         }
     }
 
@@ -146,7 +146,7 @@ public class PetListViewModel : ViewModelBase
         {
             return;
         }
-        if (!Confirm("操作提示", $"你确定要删除珍兽{petInfo.PetName}(ID:{petInfo.Id})吗?"))
+        if (!Confirm("Xác nhận", $"Có chắc chắn muốn xoá trân thú {petInfo.PetName} (ID:{petInfo.Id})?"))
         {
             return;
         }
@@ -157,11 +157,11 @@ public class PetListViewModel : ViewModelBase
                 await DeletePetAsync(Connection, petInfo);
             });
             PetList.Remove(petInfo);
-            ShowMessage("删除成功", $"删除珍兽{petInfo.PetName}(ID:{petInfo.Id})成功");
+            ShowMessage("Đã xoá thành công", $"Đã xoá thành công trân thú {petInfo.PetName}(ID:{petInfo.Id})!");
         }
         catch (Exception ex)
         {
-            ShowErrorMessage("删除失败", ex);
+            ShowErrorMessage("Xoá không thành công!", ex);
         }
     }
 

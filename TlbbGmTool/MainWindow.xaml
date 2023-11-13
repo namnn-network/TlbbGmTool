@@ -27,21 +27,21 @@
     </Window.Resources>
     <DockPanel>
         <Menu DockPanel.Dock="Top">
-            <MenuItem Header="菜单">
-                <MenuItem Header="区服管理" Command="{Binding ServerListCommand}">
+            <MenuItem Header="Danh mục">
+                <MenuItem Header="Danh sách chức năng" Command="{Binding ServerListCommand}">
                     <MenuItem.Icon>
                         <Image Source="images/setting.png"/>
                     </MenuItem.Icon>
                 </MenuItem>
                 <Separator />
-                <MenuItem Header="退出" Command="{Binding ExitCommand}">
+                <MenuItem Header="Thoát" Command="{Binding ExitCommand}">
                     <MenuItem.Icon>
                         <Image Source="images/close.png"/>
                     </MenuItem.Icon>
                 </MenuItem>
             </MenuItem>
-            <MenuItem Header="帮助">
-                <MenuItem Header="关于" Command="{Binding AboutCommand}">
+            <MenuItem Header="Hỗ trợ">
+                <MenuItem Header="Thông tin" Command="{Binding AboutCommand}">
                     <MenuItem.Icon>
                         <Image Source="images/about.png"/>
                     </MenuItem.Icon>
@@ -54,7 +54,7 @@
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
             <WrapPanel Grid.Row="0">
-                <Label Content="区服" />
+                <Label Content="Thời trang" />
                 <ComboBox MinWidth="156" Margin="10,0,0,0"
                           VerticalContentAlignment="Center"
                           IsEnabled="{Binding CanConnServer}"
@@ -62,17 +62,17 @@
                           SelectedItem="{Binding SelectedServer}"
                           DisplayMemberPath="ServerName" />
                 <Button Margin="10,0,0,0" Padding="12,5" Command="{Binding ConnectCommand}">
-                    连接
+                    Kết nối
                 </Button>
                 <Button Margin="10,0,0,0" Padding="12,5" Command="{Binding DisConnectCommand}">
-                    断开
+                    Ngắt kết nối
                 </Button>
             </WrapPanel>
             <TabControl Grid.Row="1" Margin="0,5,0,0" IsEnabled="{Binding CanDisConnServer}">
-                <TabItem Header="账号管理">
+                <TabItem Header="Quản lý tài khoản">
                     <Frame Content="{StaticResource accountListPage}"/>
                 </TabItem>
-                <TabItem Header="角色管理">
+                <TabItem Header="Quản lý vai trò">
                     <Frame Content="{StaticResource roleListPage}" IsEnabled="{Binding GameDataLoaded}"/>
                 </TabItem>
             </TabControl>

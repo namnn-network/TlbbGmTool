@@ -85,12 +85,12 @@ public class PetEditorViewModel : ViewModelBase
                 await DoSavePetAsync(Connection, _petInfo);
             });
             _inputPetInfo?.CopyFrom(_petInfo);
-            ShowMessage("保存成功", "保存珍兽信息成功");
+            ShowMessage("Đã lưu thành công", "Lưu thông tin trân thú thành công");
             OwnedWindow?.Close();
         }
         catch (Exception ex)
         {
-            ShowErrorMessage("保存珍兽信息失败", ex);
+            ShowErrorMessage("Không lưu được thông tin trân thú", ex);
         }
         finally
         {

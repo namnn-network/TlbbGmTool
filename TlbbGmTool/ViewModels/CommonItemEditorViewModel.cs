@@ -42,9 +42,9 @@ public class CommonItemEditorViewModel : ViewModelBase
         {
             if (_inputItemLog is null)
             {
-                return "发放物品";
+                return "Thêm mới vật phẩm";
             }
-            return "修改物品 " + _itemData.ItemName;
+            return "Thêm mới vật phẩm " + _itemData.ItemName;
         }
     }
     public ItemLogViewModel ItemLog
@@ -146,7 +146,7 @@ public class CommonItemEditorViewModel : ViewModelBase
         var selectorWindow = new ItemSelectorWindow();
         var beforeAction = (ItemSelectorViewModel vm) =>
         {
-            vm.WindowTitle = "选择物品";
+            vm.WindowTitle = "Chọn các mục";
             vm.InitItemId = _itemData.ItemBaseId;
             var filterClass = 3;
             switch (RoleBagType)
@@ -180,7 +180,7 @@ public class CommonItemEditorViewModel : ViewModelBase
     {
         if ((_itemData.Count < 1) || (_itemData.Count > _itemData.MaxSize))
         {
-            ShowErrorMessage("数量不正确", "当前数量设置不正确");
+            ShowErrorMessage("Số lượng không chính xác", "Cài đặt số lượng hiện tại không chính xác");
             return;
         }
         if (Connection is null)
@@ -219,12 +219,12 @@ public class CommonItemEditorViewModel : ViewModelBase
                 await ItemDbService.InsertItemAsync(connection, _itemsContainer.PosOffset, _itemsContainer.BagMaxSize, itemLog);
             });
             _itemsContainer.InsertNewItem(itemLog);
-            ShowMessage("发放成功", $"发放物品成功,pos={itemLog.Pos}");
+            ShowMessage("Thêm mới thành công", $"Thêm mới vật phẩm thành công,pos={itemLog.Pos}");
             OwnedWindow?.Close();
         }
         catch (Exception ex)
         {
-            ShowErrorMessage("发放失败", ex, true);
+            ShowErrorMessage("Thêm mới vật phẩm không thành công!", ex, true);
         }
         finally
         {
@@ -242,12 +242,12 @@ public class CommonItemEditorViewModel : ViewModelBase
             });
             itemLog.ItemBaseId = itemBaseId;
             itemLog.PData = pData;
-            ShowMessage("修改成功", "修改物品成功");
+            ShowMessage("Đã sửa thành công", "Sửa đổi mục thành công");
             OwnedWindow?.Close();
         }
         catch (Exception ex)
         {
-            ShowErrorMessage("修改失败", ex, true);
+            ShowErrorMessage("Sửa đổi không thành công!", ex, true);
         }
         finally
         {

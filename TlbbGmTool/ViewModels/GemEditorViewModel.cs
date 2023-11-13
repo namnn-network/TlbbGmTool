@@ -115,7 +115,7 @@ public class GemEditorViewModel : ViewModelBase
         var selectorWindow = new LvItemSelectorWindow();
         var beforeAction = (LvItemSelectorViewModel vm) =>
         {
-            vm.WindowTitle = "选择宝石";
+            vm.WindowTitle = "Chọn đá quý";
             vm.InitItemId = _itemData.ItemBaseId;
             vm.ItemList = (from itemBaseInfo in SharedData.ItemBaseMap.Values
                            where itemBaseInfo.TClass == 5
@@ -170,12 +170,12 @@ public class GemEditorViewModel : ViewModelBase
                 await ItemDbService.InsertItemAsync(connection, _itemsContainer.PosOffset, _itemsContainer.BagMaxSize, itemLog);
             });
             _itemsContainer.InsertNewItem(itemLog);
-            ShowMessage("发放成功", $"发放宝石成功,pos={itemLog.Pos}");
+            ShowMessage("Thêm mới thành công", $"Thêm mới đá quý thành công,pos={itemLog.Pos}");
             OwnedWindow?.Close();
         }
         catch (Exception ex)
         {
-            ShowErrorMessage("发放失败", ex, true);
+            ShowErrorMessage("Thêm mới không thành công!", ex, true);
         }
         finally
         {
@@ -193,12 +193,12 @@ public class GemEditorViewModel : ViewModelBase
             });
             itemLog.ItemBaseId = itemBaseId;
             itemLog.PData = pData;
-            ShowMessage("修改成功", "修改宝石成功");
+            ShowMessage("Chỉnh sửa thành công", "Chỉnh sửa đá quý thành công!");
             OwnedWindow?.Close();
         }
         catch (Exception ex)
         {
-            ShowErrorMessage("修改失败", ex, true);
+            ShowErrorMessage("Chỉnh sửa không thành công!", ex, true);
         }
         finally
         {

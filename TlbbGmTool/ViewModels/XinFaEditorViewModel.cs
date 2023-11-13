@@ -58,12 +58,12 @@ public class XinFaEditorViewModel : ViewModelBase
                 await DoSaveXinFaAsync(Connection, _xinFaLog);
             });
             _inputXinFaLog?.CopyFrom(_xinFaLog);
-            ShowMessage("保存成功", "保存心法等级成功");
+            ShowMessage("Cập nhật thành công", "Cập nhật thông tin tâm pháp thành công!");
             OwnedWindow?.Close();
         }
         catch (Exception ex)
         {
-            ShowErrorMessage("保存失败", ex);
+            ShowErrorMessage("Cập nhật không thành công!", ex);
         }
         finally
         {

@@ -39,32 +39,32 @@
                 <Setter Property="HorizontalAlignment" Value="Right" />
             </Style>
         </Grid.Resources>
-        <Label Grid.Row="0" Grid.Column="0">名称</Label>
+        <Label Grid.Row="0" Grid.Column="0">Tên</Label>
         <TextBox Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" Text="{Binding ServerInfo.ServerName, UpdateSourceTrigger=PropertyChanged}"/>
-        <Label Grid.Row="1" Grid.Column="0">服务器IP</Label>
+        <Label Grid.Row="1" Grid.Column="0">IP</Label>
         <TextBox Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Text="{Binding ServerInfo.DbHost, UpdateSourceTrigger=PropertyChanged}" />
-        <Label Grid.Row="2" Grid.Column="0">数据库端口</Label>
+        <Label Grid.Row="2" Grid.Column="0">DB Port</Label>
         <TextBox Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" Text="{Binding ServerInfo.DbPort, UpdateSourceTrigger=PropertyChanged}" />
-        <Label Grid.Row="3" Grid.Column="0">账号数据库</Label>
+        <Label Grid.Row="3" Grid.Column="0">AccountDB</Label>
         <TextBox Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" Text="{Binding ServerInfo.AccountDbName, UpdateSourceTrigger=PropertyChanged}" />
-        <Label Grid.Row="4" Grid.Column="0">游戏数据库</Label>
+        <Label Grid.Row="4" Grid.Column="0">Game DB</Label>
         <TextBox Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" Text="{Binding ServerInfo.GameDbName, UpdateSourceTrigger=PropertyChanged}" />
-        <Label Grid.Row="5" Grid.Column="0">数据库用户名</Label>
+        <Label Grid.Row="5" Grid.Column="0">DBUser</Label>
         <TextBox Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2" Text="{Binding ServerInfo.DbUser, UpdateSourceTrigger=PropertyChanged}" />
-        <Label Grid.Row="6" Grid.Column="0">数据库密码</Label>
+        <Label Grid.Row="6" Grid.Column="0">DBPassword</Label>
         <TextBox Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="2" Text="{Binding ServerInfo.DbPassword, UpdateSourceTrigger=PropertyChanged}" />
-        <Label Grid.Row="7" Grid.Column="0">客户端目录</Label>
+        <Label Grid.Row="7" Grid.Column="0">Thư mục client</Label>
         <TextBox Grid.Row="7" Grid.Column="1" Text="{Binding ServerInfo.ClientPath, UpdateSourceTrigger=PropertyChanged}" />
-        <Button Grid.Row="7" Grid.Column="2" Margin="5,2,0,2" Padding="12,5" Command="{Binding ChoseFolderCommand}">选择</Button>
+        <Button Grid.Row="7" Grid.Column="2" Margin="5,2,0,2" Padding="12,5" Command="{Binding ChoseFolderCommand}">Chọn</Button>
         <WrapPanel Grid.Row="8" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Right" VerticalAlignment="Center">
             <WrapPanel.Resources>
                 <Style TargetType="Button">
                     <Setter Property="Padding" Value="22,10" />
                 </Style>
             </WrapPanel.Resources>
-            <Button Command="{Binding ConnTestCommand}">测试连接</Button>
+            <Button Command="{Binding ConnTestCommand}">Kiểm tra</Button>
             <Button Margin="8,0,0,0" IsDefault="True" Command="{Binding SaveServerCommand}">
-                保存
+                Lưu
             </Button>
         </WrapPanel>
     </Grid>

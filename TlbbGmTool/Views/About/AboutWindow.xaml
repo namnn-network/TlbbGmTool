@@ -7,7 +7,7 @@
         xmlns:vm="clr-namespace:liuguang.TlbbGmTool.ViewModels"
         mc:Ignorable="d"
         WindowStartupLocation="CenterOwner" ShowInTaskbar="False" ResizeMode="CanMinimize"
-        Title="关于本程序" Height="394" Width="640">
+        Title="Về chương trình" Height="394" Width="640">
     <Window.DataContext>
         <vm:AboutWindowViewModel/>
     </Window.DataContext>
@@ -29,33 +29,36 @@
             <RowDefinition Height="30" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        <TextBlock Grid.Row="0" Style="{StaticResource BoldBlock}"><Run Text="本工具由流光开发,仅用于技术研究，使用本工具的任何后果与本作者无关。"/></TextBlock>
+        <TextBlock Grid.Row="0" Style="{StaticResource BoldBlock}">
+            <Run 
+                Text="Công cụ này chỉ dùng cho mục đích nghiên cứu kỹ thuật, tác giả không liên quan gì đến bất kỳ hậu quả nào khi sử dụng công cụ này."/>
+        </TextBlock>
         <TextBlock Grid.Row="1" Style="{StaticResource BoldBlock}">
-            <Run>当前版本:</Run>
+            <Run>Phiên bản:</Run>
             <Run Foreground="#FF51ED1A">[</Run>
             <Run Foreground="#FF3198DA" Text="{Binding Version}"/>
             <Run Foreground="#FF51ED1A">] </Run>
-            <Run> 运行时:</Run>
+            <Run> Thời gian chạy:</Run>
             <Run Foreground="#FF51ED1A">[</Run>
             <Run Foreground="#FF3198DA" Text="{Binding AppRuntime}"/>
             <Run Foreground="#FF51ED1A">]</Run>
         </TextBlock>
         <TextBlock Grid.Row="2" Style="{StaticResource BoldBlock}">
-            <Run Text="项目主页："/><Hyperlink NavigateUri="{Binding RepositoryUrl}" RequestNavigate="Hyperlink_RequestNavigate" ToolTip="访问项目主页"><Run Text="{Binding RepositoryUrl}"/></Hyperlink>
+            <Run Text="Trang chủ："/><Hyperlink NavigateUri="{Binding RepositoryUrl}" RequestNavigate="Hyperlink_RequestNavigate" ToolTip="Truy cập"><Run Text="{Binding RepositoryUrl}"/></Hyperlink>
         </TextBlock>
         <GroupBox Grid.Row="3" Margin="20,0,20,20" Padding="15">
             <GroupBox.Header>
-                <Label Content="使用说明"/>
+                <Label Content="Hướng dẫn sử dụng"/>
             </GroupBox.Header>
             <TextBlock TextWrapping="Wrap">
-                <Run Text="1.点击菜单 - 区服管理, 添加服务器的数据库配置信息。"/><LineBreak/>
-                <Run Text="2.角色管理功能需要读取客户端数据,点击连接之后，需要稍等一下等数据加载成功，才能使用搜索。"/><LineBreak/>
-                <Run>3.并不是每件装备都有属性条，具体取决于</Run><Run Foreground="#FF2DD228">EquipBase.txt</Run><Run>里面有没有配置，如果没有，那么这件装备就不能选择属性。 
-                    而装备的具体属性数值在</Run><Run Foreground="#FFDE9E11">ItemSegValue.txt</Run><Run>，虽然有64种属性，但是只有数值设置为正数的属性类型才可以在编辑器中选择，并且最多只能选择16种。</Run><LineBreak/>
-                <Run Text="4.本工具的修改功能不会影响全局，只会修改某条数据记录。"/><LineBreak/>
-                <Run Text="5.如果txt文件解析失败,可以在Config.axp所在的的文件夹中新建一个Config目录,并把txt文件放在Config目录下,程序会优先读取。"/><LineBreak/>
+                <Run Text="1.Nhấn vào menu - Server Management để thêm thông tin cấu hình cơ sở dữ liệu của máy chủ."/><LineBreak/>
+                <Run Text="2.Chức năng quản lý vai trò cần đọc dữ liệu, sau khi nhấp vào kết nối, bạn cần đợi dữ liệu tải thành công mới có thể sử dụng tìm kiếm."/><LineBreak/>
+                <Run>3.Không phải mọi thiết bị đều có thanh chỉ số, tùy thuộc vào</Run><Run Foreground="#FF2DD228">EquipBase.txt</Run><Run>Trong đó có cấu hình gì không, nếu không thì không thể chọn thuộc tính của trang bị này.
+                     Các giá trị thuộc tính cụ thể của thiết bị nằm trong</Run><Run Foreground="#FFDE9E11">ItemSegValue.txt</Run><Run>, Mặc dù có 64 loại thuộc tính, nhưng chỉ những loại thuộc tính có giá trị được đặt thành số dương mới có thể được chọn trong trình chỉnh sửa và chỉ có thể chọn tối đa 16 loại.</Run><LineBreak/>
+                <Run Text="4.Chức năng sửa đổi của công cụ này sẽ không ảnh hưởng đến toàn bộ dữ liệu mà chỉ sửa đổi một bản ghi dữ liệu nhất định."/><LineBreak/>
+                <Run Text="5.Nếu tệp txt không được phân tích cú pháp, bạn có thể tạo một thư mục Config mới trong thư mục chứa Config.axp và đặt tệp txt vào thư mục Config và chương trình sẽ đọc nó trước."/><LineBreak/>
                 <LineBreak/>
-                <Run Foreground="Red" Text="注意: 修改数据时，需要先退出游戏，否则修改可能不会生效。"/>
+                <Run Foreground="Red" Text="Lưu ý: Khi sửa đổi dữ liệu, trước tiên bạn cần thoát khỏi trò chơi, nếu không việc sửa đổi có thể không có hiệu lực."/>
             </TextBlock>
         </GroupBox>
     </Grid>

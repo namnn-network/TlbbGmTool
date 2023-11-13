@@ -16,9 +16,9 @@ public class PetSkillEditorViewModel : ViewModelBase
     private PetLogViewModel? _inputPetInfo;
     private PetLogViewModel _petInfo = new(new());
     private List<ComboBoxNode<int>> _skillTypeSelection = new() {
-        new("全部",0),
-        new("手动",1),
-        new("自动",2),
+        new("Tất cả",0),
+        new("Bị động",1),
+        new("Chủ động",2),
         new("buff",3)
     };
     private string _searchText = string.Empty;
@@ -31,7 +31,7 @@ public class PetSkillEditorViewModel : ViewModelBase
     public DbConnection? Connection;
     #endregion
     #region Properties
-    public string WindowTitle => $"修改 {_petInfo.PetName} (ID: {_petInfo.Id})技能列表";
+    public string WindowTitle => $"Chỉnh sửa {_petInfo.PetName} (ID: {_petInfo.Id}) kỹ năng!";
     public PetLogViewModel PetInfo
     {
         set
@@ -165,12 +165,12 @@ public class PetSkillEditorViewModel : ViewModelBase
                 await DoSavePetSkillAsync(Connection, _petInfo);
             });
             _inputPetInfo?.CopyFrom(_petInfo);
-            ShowMessage("保存成功", "保存珍兽技能成功");
+            ShowMessage("Lưu thành công", "Lưu thành công kỹ năng trân thú!");
             OwnedWindow?.Close();
         }
         catch (Exception ex)
         {
-            ShowErrorMessage("保存珍兽技能失败", ex);
+            ShowErrorMessage("Lưu kỹ năng trân thú thất bại!", ex);
         }
         finally
         {

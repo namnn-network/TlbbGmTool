@@ -17,17 +17,17 @@
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
         <WrapPanel Grid.Row="0">
-            <Label>类型</Label>
+            <Label>Loại hình</Label>
             <ComboBox VerticalContentAlignment="Center" MinWidth="50" ItemsSource="{Binding ShortTypeSelection}"
                       DisplayMemberPath="Title"
                       SelectedValuePath="Value"
                       SelectedValue="{Binding SelectedType}" />
-            <Label Margin="8,0,0,0">等级</Label>
+            <Label Margin="8,0,0,0">Cấp</Label>
             <ComboBox VerticalContentAlignment="Center" MinWidth="50" ItemsSource="{Binding LevelSelection}"
                       DisplayMemberPath="Title"
                       SelectedValuePath="Value"
                       SelectedValue="{Binding SelectedLevel}" />
-            <Label Margin="8,0,0,0">名称筛选</Label>
+            <Label Margin="8,0,0,0">Bộ lọc</Label>
             <TextBox MinWidth="160" Style="{StaticResource CommonTextBoxStyle}"
                      Text="{Binding SearchText,UpdateSourceTrigger=PropertyChanged}" />
         </WrapPanel>
@@ -39,14 +39,14 @@
                                     Header="ID" Binding="{Binding ItemBaseId}" SortDirection="Ascending" />
                 <DataGridTextColumn Width="38" ElementStyle="{StaticResource TextColumnStyle}"
                                     CellStyle="{StaticResource ItemCellStyle}"
-                                    Header="等级" Binding="{Binding ItemLevel}" />
+                                    Header="Cấp" Binding="{Binding ItemLevel}" />
                 <DataGridTextColumn Width="2*" ElementStyle="{StaticResource TextColumnStyle}"
                                     CellStyle="{StaticResource ItemCellStyle}"
-                                    Header="类型" Binding="{Binding ItemShortTypeString}" />
+                                    Header="Kiểu" Binding="{Binding ItemShortTypeString}" />
                 <DataGridTextColumn Width="3*" ElementStyle="{StaticResource TextColumnStyle}"
                                     CellStyle="{StaticResource ItemCellStyle}"
-                                    Header="名称" Binding="{Binding ItemName}" />
-                <DataGridTemplateColumn Header="管理" Width="90">
+                                    Header="Tên" Binding="{Binding ItemName}" />
+                <DataGridTemplateColumn Header="Quản lý" Width="90">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <Button
@@ -56,7 +56,7 @@
                                 RelativeSource={RelativeSource FindAncestor, 
                                 AncestorType={x:Type DataGrid}}}"
                                 CommandParameter="{Binding DataContext, RelativeSource={RelativeSource Self}}">
-                                选择
+                                Chọn
                             </Button>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
@@ -69,11 +69,11 @@
                     <Setter Property="Padding" Value="10,5" />
                 </Style>
             </WrapPanel.Resources>
-            <Button Command="{Binding Pagination.FirstPageCommand}">首页</Button>
-            <Button Margin="5,0" Command="{Binding Pagination.PrevPageCommand}">上一页</Button>
+            <Button Command="{Binding Pagination.FirstPageCommand}">Trang đầu</Button>
+            <Button Margin="5,0" Command="{Binding Pagination.PrevPageCommand}">Trang trước</Button>
             <Label MinWidth="60" Content="{Binding Pagination.PageTip}" />
-            <Button Margin="5,0" Command="{Binding Pagination.NextPageCommand}">下一页</Button>
-            <Button Command="{Binding Pagination.LastPageCommand}">末页</Button>
+            <Button Margin="5,0" Command="{Binding Pagination.NextPageCommand}">Trang sau</Button>
+            <Button Command="{Binding Pagination.LastPageCommand}">Trang cuối</Button>
         </WrapPanel>
     </Grid>
 </Window>

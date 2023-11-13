@@ -24,7 +24,7 @@ public static class ServerService
         var configFilePath = GetConfigFilePath();
         if (!File.Exists(configFilePath))
         {
-            throw new Exception($"配置文件{configFilePath}不存在");
+            throw new Exception($"Tệp tin cấu hình {configFilePath} không tồn tại!");
         }
 
         string fileContent;
@@ -36,7 +36,7 @@ public static class ServerService
             }
             catch (Exception e)
             {
-                throw new Exception($"读取配置文件{configFilePath}出错,{e.Message}");
+                throw new Exception($"Đọc tệp tin cấu hình {configFilePath} thất bại,{e.Message}");
             }
         }
 
@@ -47,7 +47,7 @@ public static class ServerService
         }
         catch (Exception e)
         {
-            throw new Exception($"解析配置文件{configFilePath}出错,{e.Message}");
+            throw new Exception($"Phân tích tệp tin cấu hình {configFilePath} thất bại,{e.Message}");
         }
 
         var serverList = from serverEl in
@@ -92,7 +92,7 @@ public static class ServerService
         }
         catch (Exception e)
         {
-            throw new Exception($"保存配置文件{configFilePath}出错,{e.Message}");
+            throw new Exception($"Lưu tệp tin cấu hình {configFilePath} thất bại,{e.Message}");
         }
     }
 }

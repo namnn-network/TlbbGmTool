@@ -38,7 +38,7 @@ public class RoleWindowViewModel : ViewModelBase
             {
                 return string.Empty;
             }
-            return $"管理 {RoleInfo.CharName}(角色id: {RoleInfo.CharGuid})";
+            return $"Quản lý {RoleInfo.CharName}(id: {RoleInfo.CharGuid})";
         }
     }
 
